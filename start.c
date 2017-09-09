@@ -30,7 +30,7 @@ void main(int argc, char *argv[])
         {
           i++;
           ipaddr = argv[i];
-          printf('ip address : %s', ipaddr);
+          //printf('ip address : %s', ipaddr);
         }
       }
 
@@ -40,7 +40,7 @@ void main(int argc, char *argv[])
         {
           i++;
           port = atoi(argv[i]);
-          .printf('port : %d', port);
+          //printf('port : %d', port);
         }
       }
 
@@ -50,7 +50,7 @@ void main(int argc, char *argv[])
         {
           i++;
           operation = atoi(argv[i]);
-          printf('operation : %d', operation);
+          //printf('operation : %d', operation);
         }
       }
 
@@ -60,7 +60,7 @@ void main(int argc, char *argv[])
         {
           i++;
           keyword = argv[i];
-          printf('keyword : %s', keyword);
+          //printf('keyword : %s', keyword);
         }
       }
   }
