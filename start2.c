@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 			{
 				i++;
 				operation = atoi(argv[i]);
-				printf("port is : %d\n", operation);
+				printf("operation is : %d\n", operation);
 			}
 		}
 
@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 			{
 				i++;
 				keyword = argv[i];
-				printf("port is : %d\n", keyword);
+				printf("keyword is : %s\n", keyword);
 			}
 		}
   	}
