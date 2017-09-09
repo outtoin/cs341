@@ -6,7 +6,7 @@
 
 int main(int argc, char *argv[])
 {
-  	char  	ipaddr;
+  	char  	*ipaddr;
   	int   	port;
 
   	for (int i = 1; i < argc; i++)
