@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 
   	for (int i = 1; i < argc; i++)
   	{
-		if (strcmp(argv[i], "-h"))
+		if (strcmp(argv[i], "-h") == 0)
 		{
 	  		if(i + 1 <= argc - 1)
 	  		{
@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 	  		}
 		}
 
-		else if (strcmp(argv[i], "-p"))
+		else if (strcmp(argv[i], "-p") == 0)
 		{
 			if (i + 1 <= argc - 1)
 			{
