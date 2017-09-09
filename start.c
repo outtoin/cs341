@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -6,7 +7,7 @@
 //#define PORT 4000
 //#define BUF_LEN 1024
 
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
   //int s, n;
   //char *haddr;
