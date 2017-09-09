@@ -7,7 +7,9 @@
 int main(int argc, char *argv[])
 {
   	char  	*ipaddr;
-  	int   	port;
+	int   	port;
+	int		operation;
+	char	*keyword;
 
   	for (int i = 1; i < argc; i++)
   	{
@@ -15,7 +17,6 @@ int main(int argc, char *argv[])
 		{
 	  		if(i + 1 <= argc - 1)
 	  		{
-				printf("here1");
 		  		i++;
 				ipaddr = argv[i];
 				printf("ipaddr is : %s\n", ipaddr);
@@ -26,10 +27,29 @@ int main(int argc, char *argv[])
 		{
 			if (i + 1 <= argc - 1)
 			{
-				printf("here2");
 				i++;
 				port = atoi(argv[i]);
 				printf("port is : %d\n", port);
+			}
+		}
+
+		else if (strcmp(argv[i], "-o") == 0)
+		{
+			if (i + 1 <= argc - 1)
+			{
+				i++;
+				operation = atoi(argv[i]);
+				printf("port is : %d\n", operation);
+			}
+		}
+
+		else if (strcmp(argv[i], "-k") == 0)
+		{
+			if (i + 1 <= argc - 1)
+			{
+				i++;
+				keyword = argv[i];
+				printf("port is : %d\n", keyword);
 			}
 		}
   	}
