@@ -15,9 +15,10 @@ int main(int argc, char *argv[])
 		{
 	  		if(i + 1 <= argc - 1)
 	  		{
+				printf("here1");
 		  		i++;
 				ipaddr = argv[i];
-				printf("ipaddr is : %s", ipaddr);
+				printf("ipaddr is : %s\n", ipaddr);
 	  		}
 		}
 
@@ -25,9 +26,10 @@ int main(int argc, char *argv[])
 		{
 			if (i + 1 <= argc - 1)
 			{
+				printf("here2");
 				i++;
 				port = atoi(argv[i]);
-				printf("port is : %d", port);
+				printf("port is : %d\n", port);
 			}
 		}
   	}
