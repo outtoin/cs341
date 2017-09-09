@@ -1,70 +1,29 @@
 #include <stdio.h>
+#include <cs50.h>
 #include <stdlib.h>
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
+#include <string.h>
+#include <ctype.h>
 
-//#define PORT 4000
-//#define BUF_LEN 1024
+#define BUF_LEN 1024
 
-int main(int argc, char *argv[])
+void main(int argc, char *argv[])
 {
-  //int s, n;
-  //char *haddr;
-  //struct sockaddr_in server_addr;
-  //char buf[BUF_LEN+1];
+    // handling file stdin
+    char    buf[BUF_LEN];
+    size_t  nread;
 
-  char  ipaddr;
-  int   port = 0;
-  int   operation = 0;
-  char  keyword;
+    // for vigenere cipher parameter
+    int shift;
+    int KeyValue;
 
-  if(argc == 1) {
-    fputs("error!\n", stderr);
-    exit(1);
-  }
+    while((nread = fgets(buf, BUF_LEN, stdin)) > 0)
+    {
+        int     ix;
 
-  for (int i = 1; i < argc; i++) {
-      if (strcmp(argv[i], "-h") == 0)
-      {
-        if (i + 1 <= argc - 1)
-        {
-          i++;
-          ipaddr = argv[i];
-          //printf('ip address : %s', ipaddr);
+        for (ix = 0; ix < strlen(buf); ix++){
+            buf[ix] = (char)tolower(buf[ix]);
         }
-      }
 
-      else if (strcmp(argv[i], "-p") == 0)
-      {
-        if (i + 1 <= argc - 1)
-        {
-          i++;
-          port = atoi(argv[i]);
-          //printf('port : %d', port);
-        }
-      }
-
-      else if (strcmp(argv[i], "-o") == 0)
-      {
-        if (i + 1 <= argc - 1)
-        {
-          i++;
-          operation = atoi(argv[i]);
-          //printf('operation : %d', operation);
-        }
-      }
-
-      else if (strcmp(argv[i], "-k") == 0)
-      {
-        if (i + 1 <= argc - 1)
-        {
-          i++;
-          keyword = argv[i];
-          //printf('keyword : %s', keyword);
-        }
-      }
-  }
-
-  return 0;
+        printf("%s\n", buf);
+    }
 }
