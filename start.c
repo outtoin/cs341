@@ -1,7 +1,7 @@
-#include "stdio.h"
-#include "sys/types.h"
-#include "sys/socket.h"
-#include "netinet/in.h"
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
 
 //#define PORT 4000
 //#define BUF_LEN 1024
@@ -14,8 +14,8 @@ void main(int argc, char *argv[])
   //char buf[BUF_LEN+1];
 
   char  ipaddr;
-  int   port;
-  int   operation;
+  int   port = 0;
+  int   operation = 0;
   char  keyword;
 
   if(argc == 1) {
@@ -40,7 +40,7 @@ void main(int argc, char *argv[])
         {
           i++;
           port = atoi(argv[i]);
-          printf('port : %d', port);
+          .printf('port : %d', port);
         }
       }
 
