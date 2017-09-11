@@ -1,13 +1,13 @@
 all : client server
-	gcc -c -o newclient newclient.c
-	gcc -c -o newserver newserver.c
+	gcc -c -o client client.c
+	gcc -c -o server server.c
 
 client : newclient.c
-	gcc -c -o newclient newclient.c
+	gcc -c -o client client.c
 
 server : newserver.c
-	gcc -c -o newserver newserver.c
+	gcc -c -o server server.c
 
 clean :
-	rm newclient
-	rm newserver
+	rm client
+	rm server
