@@ -127,7 +127,7 @@ void main(int argc, char *argv[])
 		uint16_t checksum_test = htons('\x4d\x2e');
 		printf("%x\n", checksum_test);
 		//uint16_t check_sum = checksum2(message, be64toh(length));
-		printf("check_sum : %x\n", check_sum);
+		printf("check_sum : %x\n", check_sum1);
 		memcpy(message+2, &check_sum, sizeof(char) * 2);
 
 		int j;
