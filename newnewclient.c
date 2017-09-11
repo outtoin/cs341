@@ -89,8 +89,8 @@ void main(int argc, char *argv[])
         exit(1);
     }
 
-    uint64_t    length;
-    int         str_len1, str_len2;
+    uint64_t length;
+    int 		str_len1, str_len2;
 
     while(1)
     {
@@ -123,7 +123,9 @@ void main(int argc, char *argv[])
 
 		printf("\nread_message: \n");
 
-        str_len2 = rio_writen(client_socket, message, be64toh(length));
+        ssize_t writen;
+
+        writen = rio_writen(client_socket, message, be64toh(length));
     }
     close(client_socket);
 }
