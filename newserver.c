@@ -80,7 +80,7 @@ void main(int argc, char *argv[])
 
     int str_len3, str_len2, str_len1;
 
-    str_len3 = rio_readn(client_socket, message. 8);
+    str_len3 = rio_readn(client_socket, message, 8);
     fprintf(stderr, "str_len3 : %d\n", str_len3);
 
 

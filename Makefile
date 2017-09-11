@@ -1,4 +1,4 @@
-all : newclient.c newserver.c
+all : client server
 	gcc -c -o newclient newclient.c
 	gcc -c -o newserver newserver.c
 
