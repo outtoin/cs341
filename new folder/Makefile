@@ -2,10 +2,10 @@ all : client server
 	gcc -c -o client client.c
 	gcc -c -o server server.c
 
-client : newclient.c
+client : client.c
 	gcc -c -o client client.c
 
-server : newserver.c
+server : server.c
 	gcc -c -o server server.c
 
 clean :
